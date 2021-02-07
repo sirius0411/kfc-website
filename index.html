@@ -1,17 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
     <head>
         <meta charset="utf-8"/>
-        <title><%= htmlWebpackPlugin.options.title %></title>
-        <meta name="viewport" content="width=device-width">
-
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="icon" type="image/ico" href="https://cdn.jsdelivr.net/npm/komori-chiyu-button-assets@0.0.17/dist/komori-hat.svg">
+        <title><%= htmlWebpackPlugin.options.title %></title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     </head>
     <body>
-        <div class="main">
-            <div class="logo">
-                <img src="/assets/kfc_logo.png">
+        <img src="assets/kfc.png" id="motto">
+        <main class="container">
+            <div class="row justify-content-center main">
+                <div class="col">
+                    <div class="logo-container">
+                        <img src="assets/bg_logo.png" class="logo align-middle" draggable="false">
+                        <img src="assets/logo.gif" class="logo align-middle" draggable="false" id="logo">
+                    </div>
+                </div>
+                <div class="col">
+                    <a class="item" href="/komori">了解古守血遊</a>
+                    <a class="item" href="//button.komori.club/">古守按钮站</a>
+                    <a class="item" href="//game.komori.club/fukuwarai">福笑い</a>
+                </div>
+                <div class="col">
+                    <a class="item" href="//space.bilibili.com/1616870119/">KFC空间</a>
+                    <a class="item" href="//game.komori.club/manaita">合成大砧板</a>
+                    <a class="item" href="#" id="ad" data-bs-toggle="modal" data-bs-target="#adContainer">吃人啦！</a>
+                </div>
             </div>
-        </div>
+        </main>
+
+        <div class="modal" tabindex="-1" id="adContainer">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">KFC吃人啦</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Q：会长我什么都不会，但是想试着创作可以吗</p>
+                    <p>A：没事，会长就是什么都不会的five，只要你足够anti（gachi）就可以成为新的神龙</p>
+                    <p>目前KFC现有的形式、能想到的所需要的（但不仅限于）：</p>
+                    <p><b>周报</b>：直播内容详略总结、每周古守中心的二创作品收集</p>
+                    <p><b>美工/设计师/画师</b></p>
+                    <p><b>模型/MMD/VMD</b></p>
+                    <p><b>音MAD/鬼畜</b></p>
+                    <p><b>网站/小游戏</b>：参照目前网站的建设，有做小游戏的卫星</p>
+                    <p><b>切片</b>：参照字幕组所有工作内容，不设审核限制，打轴剪辑等可从零开始交流学习。可以实时交流有趣的直播内容剪辑想法</p>
+                    <p><b>工口</b>：＃えっちゆ 自己看吧</p>
+                    <p>这里没有创作形式的限制，欢迎任何古守粉丝加入！自由发挥，有感兴趣的进来脑暴！
+                        QQ群：1106046120</p>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
 </html>

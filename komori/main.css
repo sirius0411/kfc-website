@@ -1,0 +1,440 @@
+* {
+    transition: all .3s;
+}
+
+/* .perspective {
+    perspective: 800px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+
+.preserve3d {
+    /* position: relative;
+    width: 500px;
+    height: 400px;
+    margin: 160px auto;
+    background: #4b5cce url("http://data.banyanbbt.org/static/newimg/top/right.png") center no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px; */
+    transform-style: preserve-3d;
+}
+
+body {
+    background-color: #ffeeee;
+    overflow: hidden;
+    margin: 0;
+}
+
+.loading {
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-right: 0;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    animation-name: dropFadeOut;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.77,.24,.86,.66);
+    animation-duration: 2s;
+    animation-delay: 1s;
+
+    animation-play-state: paused;
+}
+
+.loading label {
+    color: white;
+    font-size: 25px;
+}
+
+.root {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.dropContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+
+    animation-name: dropFadeOut;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.77,.24,.86,.66);
+    animation-duration: 4s;
+    animation-delay: 3.2s;
+
+    animation-play-state: paused;
+}
+
+@keyframes dropFadeOut {
+    to {
+        background-color: transparent;
+        opacity: 0;
+    }
+}
+  
+.drop {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: -30px;
+    margin: 0 auto;
+    background: #b41e23;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -moz-animation-name: drip;
+    -webkit-animation-name: drip;
+    animation-name: drip;
+    -moz-animation-timing-function: cubic-bezier(1,0,.81,.19);
+    -webkit-animation-timing-function: cubic-bezier(1,0,.81,.19);
+    animation-timing-function: cubic-bezier(1,0,.81,.19);
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+
+    animation-play-state: paused;
+
+    /* -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
+}
+  
+.drop:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 30px solid #b41e23;
+    top: -22px;
+}
+  
+@keyframes drip {
+    to {
+        top: 50vh;
+    }
+}
+
+.pulse1 {
+    position: absolute;  
+    width: 200px;
+    height: 200px;
+    margin: auto; 
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 1;
+    opacity: 0;
+    border: 3px solid rgba(255,255,255,.1);
+
+    -webkit-animation: pulsejg1 4s linear;
+    -moz-animation: pulsejg1 4s linear;
+    animation: pulsejg1 4s linear;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    box-shadow: inset 0px 0px 15px 10px #b41e23;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    animation-delay: 1.8s;
+
+    animation-play-state: paused;
+}
+
+.pulse2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin: auto; 
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 2;
+    opacity: 0;
+    border: 1px solid rgba(255,255,255,0);
+
+    -webkit-animation: pulsejg2 4s linear;
+    -moz-animation: pulsejg2 4s linear;
+    animation: pulsejg2 4s linear;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    box-shadow: inset 0px 0px 12px 5px #b41e23;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    animation-delay: 1.8s;
+
+    animation-play-state: paused;
+}
+
+@keyframes pulsejg1 {
+    0% {
+        transform: scale(.2);
+        opacity: 0;
+    }
+
+    /*20% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.9);
+        opacity: .1;
+    }*/
+
+    70% {
+        transform: scale(3.5);
+        opacity: .5;
+    }
+
+    80% {
+        transform: scale(4.35);
+        opacity: .2;
+    }
+
+    100% {
+        transform: scale(4.4);
+        opacity: 0;
+    }
+}
+
+@keyframes pulsejg2 {
+    0% {
+        transform: scale(.2);
+        opacity: 0;
+    }
+
+    /*10% {
+        transform: scale(1.8);
+        opacity: .05;
+    }
+
+    50% {
+        transform: scale(3);
+        opacity: .1;
+    }*/
+
+    60% {
+        transform: scale(5.5);
+        opacity: .6;
+    }
+
+    80% {
+        transform: scale(5.3);
+        opacity: .6;
+    }
+
+    100% {
+        transform: scale(5.3);
+        opacity: 0;
+    }
+}
+
+.main {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.jsdelivr.net/gh/sirius0411/komori-fan-club/static/bg_nets.png') no-repeat 50% 50%;
+    z-index: -1;
+    transform: translateX(var(--translateX));
+}
+
+.main .left {
+    position: absolute;
+    height: 100%;
+    margin-top: auto;
+    margin-left: 10vw;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+    transform-origin: 50% 50%;
+}
+
+.main .left > * {
+    position: absolute;
+}
+
+#komori {
+    width: auto;
+    height: 95vh;
+    margin-top: auto;
+    bottom: 0;
+}
+
+#logo {
+    /* width: 64px; */
+    height: 64px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 32px;
+    margin-bottom: 32px;
+}
+
+#banner {
+    height: 68vh;
+    margin-left: auto;
+    top: 5vh;
+    left: 85vh;
+}
+
+.disable {
+    filter: grayscale(1);
+    opacity: 0.8;
+}
+
+#sakura {
+    position: absolute;
+    z-index: -1;
+}
+
+.toolbar {
+    position: absolute;
+    right: 32px;
+    top: 16px;
+    display: none;
+}
+
+.toolbar .toolbar-item {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #444041;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Microsoft YaHei',Roboto, "Noto Sans Japanese", 游ゴシック体, YuGothic, "YuGothic M", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.agreement {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Microsoft YaHei',Roboto, "Noto Sans Japanese", 游ゴシック体, YuGothic, "YuGothic M", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.agreement .header {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+}
+
+.agreement .header h1 {
+    font-size: 48px;
+    color: white;
+    text-decoration: solid;
+    margin: 0 auto;
+}
+
+.agreement .header h1 span {
+    color: red;
+}
+
+.agreement .content {
+    color: white;
+    width: 90vw;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 26px;
+}
+
+.agreement .content ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.jp {
+    font-style: italic;
+    font-size: 24px;
+}
+
+.agreement .action {
+    font-size: 30px;
+    text-decoration: none;
+    color: cornflowerblue;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.agreement .action a {
+    text-decoration: none;
+    margin: 5vw;
+    cursor: pointer;
+}
+
+.agreement .action a:visited {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.copyrights {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fa5959;
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+.copyrights p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.copyrights a {
+    text-decoration: none;
+}
+
+.copyrights a:link {
+    color: #fa5959;
+}
+
+.copyrights a:visited {
+    color: #fa5959;
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: calc(95vh + 10vw);
+    margin-right: 2vw;
+    margin-top: 50px;
+    margin-bottom: 128px;
+    border-radius: 10px;
+    background-color: rgba(255, 157, 157, 0.3);
+    color: #fa5959;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Microsoft YaHei',Roboto, "Noto Sans Japanese", 游ゴシック体, YuGothic, "YuGothic M", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.avatar {
+    border-radius: 50%;
+}
