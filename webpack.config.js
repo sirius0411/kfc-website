@@ -15,8 +15,8 @@ module.exports = {
     output: {
         filename: '[name].[chunkhash:8].js',
         path: path.resolve(__dirname, 'dist'),
-        // publicPath: '/',
-        publicPath: 'https://cdn.jsdelivr.net/gh/sirius0411/kfc-website/',
+        publicPath: '/',
+        // publicPath: 'https://cdn.jsdelivr.net/gh/sirius0411/kfc-website/',
     },
     plugins: [
         new HtmlWebpackPlugin({
