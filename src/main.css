@@ -13,6 +13,7 @@ main {
 
 .main {
     height: 100vh;
+    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -85,4 +86,40 @@ a:hover {
     width: 20vmin;
     left: 15vmin;
     top: 15vmin;
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        /* height: 100vh; */
+        align-content: center;
+    }
+    
+    .main {
+        /* height: 100vh; */
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .logo-container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5vh;
+        margin-bottom: 10vmin;
+    }
+
+    #motto {
+        left: 5vmin;
+        top: 5vmin;
+    }
+
+    .item {
+        line-height: 10vmin;
+        font-size: large;
+        margin-top: 0;
+        margin-bottom: 5vmin;
+    }
+
+    .col {
+        flex: inherit;
+    }
 }
