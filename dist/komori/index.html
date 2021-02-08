@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Komori Fan Club</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="icon" type="image/ico" href="https://cdn.jsdelivr.net/npm/komori-chiyu-button-assets@0.0.17/dist/komori-hat.svg">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    </head>
+    <body>
+        <div class="root">
+            <div class="main">
+                <canvas id="sakura"></canvas>
+                <div class="left preserve3d">
+                    <img src="https://cdn.jsdelivr.net/gh/sirius0411/komori-fan-club/static/main.png" id="komori" draggable="false">
+                    <img src="https://cdn.jsdelivr.net/gh/sirius0411/komori-fan-club/static/banner.png" id="banner" draggable="false">
+                </div>
+
+                <div class="right">
+                    <img src="https://cdn.jsdelivr.net/gh/sirius0411/komori-fan-club/static/avatar.jpg" class="avatar" width="64px" height="64px">
+                    <h3>古守ちゆ</h3>
+                    <p>所属于(Chucolala)的虚拟Youtuber。</p>
+                    <p>是家里蹲吸血鬼，平常不会出门。最近因为不够存活用的钱血液而出道作为虚拟Youtuber，但是为了养活自己所以成为了无情的<del>打工战士</del></p>
+                    <p>白发红瞳的吸血鬼，穿着黑色的兔耳<del>驴耳</del>兜帽衫。双手藏在袖子里，可以举起或放下。素颜时是蝙蝠。</p>
+                    <br>
+                    <p>ちゅこらら所属Vtuber ヒキコモリ吸血鬼の古守ちゆです🕸。ゲームと歌がすきです。</p>
+                </div>
+
+                <img src="https://cdn.jsdelivr.net/gh/sirius0411/komori-fan-club/static/kfc_logo.png" id="logo">
+
+                <div class="toolbar">
+                    <a href="//space.bilibili.com/2299184" class="toolbar-item">古守血遊official</a>
+                    <a href="//space.bilibili.com/1616870119" class="toolbar-item">KFC</a>
+                    <a href="//button.komori.club" class="toolbar-item">按钮站</a>
+                    <a href="//fan.komori.club" class="toolbar-item">合成大砧板</a>
+                </div>
+
+                <div class="copyrights">
+                    <p>
+                        Site © SiriusK@KFC<br>
+                        Artwork © <a href="https://twitter.com/fu_yusei_server">@洗濯板</a>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="dropContainer">
+                <div class="drop"></div>
+                <div class="pulse1"></div>
+                <div class="pulse2"></div>
+                <div class="loading">
+                    <label>Lording……</label>
+                    <img src="static/loading_idol.gif" width="80px" height="80px" id="loadingImage">
+                </div>
+            </div>
+
+            <div class="agreement">
+                <div class="header">
+                    <h1><span>绝密 | 極秘</span></h1>
+                    <br>
+                    <h1>肉肉守则</h1>
+                    <h1>肉たちの準則</h1>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>
+                            为了不让古守太过骄傲，肉肉们平时要装作是古守的anti
+                        </li>
+                        <li class="jp">
+                            古守を誇りすぎないように、、肉たちは普段は古守antiを装って
+                        </li>
+                        <br>
+                        <li>
+                            虽然最近我们在讨论让古守开心的方法，但是平常要装作不在意的样子
+                        </li>
+                        <li class="jp">
+                            最近は肉たちが古守を楽しませる方法を相談していますが、普段は気にしないふりをしています
+                        </li>
+                        <br>
+                        <li>
+                            古守每次在唱歌的时候，我们在聊天的地方打call，不要停下来啊！
+                        </li>
+                        <li>
+                            古守は每回歌を歌う時、肉たちはチャットの場で○○して、甚だしきに至ってはもうすぐ気が狂います
+                        </li>
+                        <br>
+                        <li>
+                            玩游戏的时候说着要暴打她，其实大家在偷偷守护着古守
+                        </li>
+                        <li class="jp">
+                            ゲームをする時は彼女を乱暴に殴ると言いますが、ほとんどの肉はこっそり古守を守っています
+                        </li>
+                        <br>
+                        <li>
+                            不管是为了开心还是什么，大家要永远和陪着古守走到最后
+                        </li>
+                        <li class="jp">
+                            楽しいかどうかは別にして、みんなは永遠に古守に付き添って最後まで歩きます
+                        </li>
+                    </ul>
+                </div>
+                <div class="action">
+                    <a href="https://space.bilibili.com/2299184">DISAGREE</a>
+                    <a id="accept">ACCEPT</a>
+                </div>
+            </div>
+        </div>
+        
+        <audio src="https://cdn.jsdelivr.net/gh/sirius0411/komori-fan-club/static/最后的雨.mp3" hidden="true" loop="true" id="player"></audio>
+        <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/sirius0411/komori-fan-club/rain.js"></script>
+    </body>
+</html>
