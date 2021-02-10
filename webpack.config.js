@@ -22,6 +22,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Komori Fan Club',
             template: 'index.html',
+            releaseHost: 'komori.club',
         }),
         new CleanWebpackPlugin(),
         new CopyPlugin({
